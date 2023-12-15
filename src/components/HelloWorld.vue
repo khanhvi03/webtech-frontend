@@ -6,12 +6,15 @@ defineProps<{
 
 <template>
   <div class="hello">
-    <h1 class="green">{{ msg }}</h1>
-    <h3>
+    <h1>
       Welcome to my project!
-    </h3>
+    </h1>
   </div>
 </template>
 
 <style scoped>
+h1 {
+    min-height: 10vh;
+    display: flex;
+  }
 </style>
