@@ -1,6 +1,5 @@
 <template>
-  <div class="container">
-    <header class="m-auto">
+  <div class="container-fluid p-3">
       <div class="row flex-nowrap justify-content-between align-items-center">
         <div class="col-4 pt-1">
           <nav class="navbar navbar-expand-lg navbar-bg" id="header">
@@ -25,7 +24,7 @@
       </div>
 
       <div class="d-none d-lg-block" id="menu">
-        <div class="nav-scroller px-1 mt-3 border-bottom border-top">
+        <div class=" mt-3 border-bottom border-top">
           <nav class="nav justify-content-center">
             <!-- Home Page -->
             <router-link class="nav-item nav-link active" to="/">Home</router-link>
@@ -35,6 +34,7 @@
             <router-link class="nav-link nav-item active" to="/Submit">Submit</router-link>
             <!-- Store Page -->
             <router-link class="nav-link nav-item active" to="/Store">Store</router-link>
+            <router-link class="nav-link nav-item active" to="/dashboard">Dashboard</router-link>
           </nav>
         </div>
       </div>
@@ -47,8 +47,6 @@
           <router-link class="nav-link nav-item active" to="/Store">Store</router-link>
         </div>
       </div>
-
-    </header>
   </div>
 </template>
 
@@ -87,7 +85,7 @@ onMounted(async () => {
 }
 #menu {
 //background-color: #e4f1ff;
-  font-size: x-large;
+  font-size: large;
 }
 
 .nav-link {
@@ -101,4 +99,3 @@ onMounted(async () => {
 }
 
 </style>
-

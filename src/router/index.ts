@@ -27,6 +27,31 @@ const router = createRouter({
       component: () => import('../views/StoreView.vue')
     },
     {
+      path: '/dashboard',
+      name: 'dashboard',
+      component: () => import('../views/Dashboard/DashBoard.vue')
+    },
+    {
+      path: '/dashboard/submissions',
+      name: 'submissions',
+      component: () => import('../views/Dashboard/SubmissionView.vue')
+    },
+    {
+      path: '/dashboard/posts',
+      name: 'PostLists',
+      component: () => import('../views/Post/ViewPost.vue')
+    },
+    {
+      path: '/dashboard/post/new',
+      name: 'CreatePost',
+      component: () => import('../views/Post/CreatePost.vue')
+    },
+    {
+      path: '/dashboard/post/{:id}',
+      name: 'EditPost',
+      component: () => import('../views/Post/EditPost.vue')
+    },
+    {
       path: '/login',
       name: 'login',
       component: () => import('../views/LoginView.vue')
@@ -34,6 +59,13 @@ const router = createRouter({
     {
       path: '/login/callback',
       component: LoginCallback
+    },
+    {
+      path: '/profile',
+      component: () => import('../views/Dashboard/Profile.vue'),
+      meta: {
+        requiresAuth: true
+      }
     },
     {
       path: '/publications',

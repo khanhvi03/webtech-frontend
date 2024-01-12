@@ -4,16 +4,15 @@
   </header>
 
   <main>
-    <div class="p-4 mx-5">
-      <HelloWorld/>
+    <div class="px-4 my-5">
+      <Posts/>
     </div>
   </main>
-
 </template>
 
 <script setup lang="ts">
 import Navbar from '@/components/NavBar.vue'
-import HelloWorld from "@/components/HelloWorld.vue";
+import Posts from "@/components/Post/Posts.vue";
 </script>
 
 <style scoped></style>
