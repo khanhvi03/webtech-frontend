@@ -13,10 +13,14 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
-    "axios": "^1.6.2",
+    "@okta/okta-auth-js": "^7.5.0",
+    "@okta/okta-signin-widget": "^7.14.0",
+    "@okta/okta-vue": "^5.7.0",
+    "axios": "^1.6.5",
     "bootstrap": "^5.3.2",
+    "bootstrap-icons": "^1.11.3",
     "lorem-ipsum-generator": "^1.0.4",
-    "vue": "^3.3.4",
+    "vue": "^3.4.11",
     "vue-router": "^4.2.5"
   },
   "devDependencies": {

@@ -1,15 +1,19 @@
 <template>
+  <header>
+    <Navbar />
+  </header>
+
   <main>
-    <HelloWorld/>
-    <UserRegistration/>
+    <div class="p-4 mx-5">
+      <HelloWorld/>
+    </div>
   </main>
+
 </template>
 
 <script setup lang="ts">
+import Navbar from '@/components/NavBar.vue'
 import HelloWorld from "@/components/HelloWorld.vue";
-import UserRegistration from "@/components/UserRegistration.vue";
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
