@@ -34,7 +34,7 @@ onMounted(async () => {
         <p>
           Below is the information from your ID token.
         </p>
-        <table>
+        <table class="table table-hover">
           <thead>
           <tr>
             <th>Claim</th>

@@ -2,23 +2,23 @@
   <div class="container justify-content-center py-4">
     <h1 class="text-center display-2 pb-4" id="title">Posts</h1>
     <!-- Add button for creating a new post -->
-    <router-link to="/dashboard/post/new" class="btn btn-primary mb-3">Add Post</router-link>
-    <table class="table table-striped">
+    <router-link to="/dashboard/post/new" class="btn bg-primary-subtle mb-3">Add Post</router-link>
+    <table class="table table-hover">
       <thead>
       <tr>
-        <th>ID</th>
         <th>Title</th>
         <th>Author</th>
         <th>Content</th>
         <th>Published On</th>
+        <th>Updated On</th>
+        <th></th>
       </tr>
       </thead>
-      <tbody>
+      <tbody class="table-group-divider">
       <tr v-if="posts.length === 0">
         <td colspan="5">Loading...</td>
       </tr>
       <tr v-for="post in posts" :key="post.id">
-        <td>{{ post.id }}</td>
         <td>{{ post.title }}</td>
         <td>{{ post.author }}</td>
         <td>
@@ -34,15 +34,16 @@
               <h5 class="offcanvas-title" id="contentOffcanvasLabel">Full Content</h5>
               <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
-            <div class="offcanvas-body">
-              {{ post.content }}
-            </div>
+            <div class="offcanvas-body">{{ post.content }}</div>
           </div>
         </td>
         <td>{{ formatDateTime(post.publishedOn)}}</td>
+        <td>{{ formatDateTime(post.updatedOn)}}</td>
         <td>
-          <router-link :to="`/dashboard/post/:id`" class="btn btn-sm btn-outline-primary ms -2"><i class="fs-7 bi bi-pencil-square"></i></router-link>
-          <button class="btn btn-sm btn-outline-danger ms-xl-2 my-2" @click="deletePost(post.id)"><i class="fs-7 bi bi-trash-fill"></i></button>
+          <router-link id="edit-post" :to="{ name: 'EditPost', params: { id : post.id } }">
+            <button class="btn btn-sm btn-outline-primary"><i class="fs-7 bi bi-pencil-square"></i></button>
+          </router-link>
+          <button class="btn btn-sm btn-outline-danger ms-xxl-2 my-2" @click="deletePost(post.id)"><i class="fs-7 bi bi-trash-fill"></i></button>
         </td>
         </tr>
       </tbody>
@@ -61,7 +62,7 @@ import type {Post} from "@/types"
 const posts: Ref<Post[]> = ref([])
 
 async function loadPosts() {
-  const baseUrl = import.meta.env.VITE_BACKEND_BASE_URL // Replace with your actual backend URL
+  const baseUrl = import.meta.env.VITE_BACKEND_BASE_URL
   const endpoint = `${baseUrl}/api/posts`
 
   try {
@@ -77,6 +78,7 @@ async function deletePost(postId: number) {
 
   try {
     await axios.delete(endpoint)
+    alert("Deleted")
     loadPosts()
   } catch (error) {
     console.error(`Failed to delete post with ID ${postId}:`, error)

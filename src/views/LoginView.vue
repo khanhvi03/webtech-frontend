@@ -21,7 +21,7 @@ onUnmounted(() => {
 <template>
   <header> <NavBar/></header>
   <main class="container mt-5">
-    <div class="d-flex justify-content-evenly">
+    <div class="d-flex justify-content-center">
       <div class="login ">
         <div id="okta-signin-container"></div>
       </div>

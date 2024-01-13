@@ -18,8 +18,17 @@
         </div>
         <div class="col-4 d-flex justify-content-end align-items-center">
           <!-- Login Link -->
-          <router-link class="btn btn-lg btn-outline-primary" to="/login" v-if="!authenticated">Login</router-link>
-          <a class="nav-link nav-item active" v-if="authenticated" v-on:click="logout()">Logout</a>
+          <router-link class="btn btn-md btn-outline-primary" to="/login" v-if="!authenticated">Login</router-link>
+          <div class="dropdown" v-if="authenticated">
+            <a href="#" class="d-flex align-items-center justify-content-center link-dark text-decoration-none dropdown-toggle" id="dropdownUser3" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fs-2 bi-person-circle h2"></i>
+            </a>
+            <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser3">
+              <li><router-link to="/profile" class="dropdown-item">Profile</router-link></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" v-on:click="logout()">Logout</a></li>
+            </ul>
+          </div>
         </div>
       </div>
 
@@ -34,7 +43,7 @@
             <router-link class="nav-link nav-item active" to="/Submit">Submit</router-link>
             <!-- Store Page -->
             <router-link class="nav-link nav-item active" to="/Store">Store</router-link>
-            <router-link class="nav-link nav-item active" to="/dashboard">Dashboard</router-link>
+            <router-link class="nav-link nav-item active" to="/dashboard" v-if="authenticated">Dashboard</router-link>
           </nav>
         </div>
       </div>

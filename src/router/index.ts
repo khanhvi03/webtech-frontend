@@ -1,7 +1,7 @@
 import {createRouter, createWebHistory} from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 
-import {LoginCallback} from '@okta/okta-vue'
+import {LoginCallback, navigationGuard} from '@okta/okta-vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -10,6 +10,12 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: HomeView
+    },
+    ,
+    {
+      path: '/post/{:id}',
+      name: 'PostDetails',
+      component: () => import('../views/PostDetails.vue')
     },
     {
       path: '/about',
@@ -29,27 +35,42 @@ const router = createRouter({
     {
       path: '/dashboard',
       name: 'dashboard',
-      component: () => import('../views/Dashboard/DashBoard.vue')
+      component: () => import('../views/Dashboard/DashBoard.vue'),
+      meta: {
+        requiresAuth: true
+      }
     },
     {
       path: '/dashboard/submissions',
       name: 'submissions',
-      component: () => import('../views/Dashboard/SubmissionView.vue')
+      component: () => import('../views/Dashboard/SubmissionView.vue'),
+      meta: {
+        requiresAuth: true
+      }
     },
     {
       path: '/dashboard/posts',
       name: 'PostLists',
-      component: () => import('../views/Post/ViewPost.vue')
+      component: () => import('../views/Post/ViewPost.vue'),
+      meta: {
+        requiresAuth: true
+      }
     },
     {
       path: '/dashboard/post/new',
       name: 'CreatePost',
-      component: () => import('../views/Post/CreatePost.vue')
+      component: () => import('../views/Post/CreatePost.vue'),
+      meta: {
+        requiresAuth: true
+      }
     },
     {
       path: '/dashboard/post/{:id}',
       name: 'EditPost',
-      component: () => import('../views/Post/EditPost.vue')
+      component: () => import('../views/Post/EditPost.vue'),
+      meta: {
+        requiresAuth: true
+      }
     },
     {
       path: '/login',
@@ -74,5 +95,6 @@ const router = createRouter({
     }
   ]
 })
+router.beforeEach(navigationGuard)
 
 export default router

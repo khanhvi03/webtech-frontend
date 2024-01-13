@@ -1,4 +1,5 @@
 <template>
+  <form @submit.prevent="submit">
   <div class="container px-4 my-5 justify-content-center ">
     <h1 class="mb-5 text-center display-4 text-emphasis" id="header">SUBMIT</h1>
     <h6 class="mb-3">Please fill in all fields to submit your work!</h6>
@@ -43,8 +44,8 @@
         Submit
       </button>
     </div>
-
   </div>
+  </form>
 </template>
 
 <script setup lang="ts">

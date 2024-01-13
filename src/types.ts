@@ -3,7 +3,8 @@ export type Post = {
     author: string,
     title: string,
     content: string,
-    publishedOn: Date }
+    publishedOn: Date,
+    updatedOn: Date}
 
 export type Submission = {
     id?: number,

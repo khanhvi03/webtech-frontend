@@ -1,7 +1,7 @@
 <template>
   <div class="container justify-content-center py-4">
     <h1 class="text-center display-2 pb-4" id="title">Submissions</h1>
-    <table class="table table-striped">
+    <table class="table table-hover ">
       <thead>
       <tr>
         <th>Title</th>
@@ -9,9 +9,10 @@
         <th>Email</th>
         <th>Content</th>
         <th>Submitted On</th>
+        <th></th>
       </tr>
       </thead>
-      <tbody>
+      <tbody class="table-group-divider">
       <tr v-if="submissions.length === 0">
         <td colspan="6">Loading...</td>
       </tr>
@@ -21,7 +22,7 @@
         <td>{{ submission.email }}</td>
         <td>
           <div>
-            {{ submission.content.substring(0, 46) }}...
+            {{ submission.content.substring(0, 40) }}...
             <button class="btn btn-sm ms-1 " data-bs-toggle="offcanvas" :data-bs-target="'#contentOffcanvas' + submission.id" aria-controls="contentOffcanvas">
               <i class="bi bi-arrows-angle-expand fs-7 ms"></i>
             </button>
@@ -74,6 +75,7 @@ async function deleteSubmission(sid: number) {
 
   try {
     await axios.delete(endpoint)
+    alert("Deleted");
     loadSubmissions()
   } catch (error) {
     console.error(`Failed to delete post with ID ${sid}:`, error)

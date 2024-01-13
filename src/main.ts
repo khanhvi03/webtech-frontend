@@ -28,8 +28,8 @@ const oktaSignIn = new OktaSignIn({
 })
 
 const oktaAuth = new OktaAuth({
-    issuer: 'https://dev-4978011.okta.com/oauth2/default',
-    clientId: '0oa3hzj56gAYGbvN25d7',
+    issuer: 'https://dev-96751955.okta.com/oauth2/default',
+    clientId: '0oaebs2u2hRasa7yf5d7',
     redirectUri: window.location.origin + '/login/callback',
     scopes: ['openid', 'profile', 'email']
 })

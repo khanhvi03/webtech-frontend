@@ -6,7 +6,7 @@
 
     <div class="col col-10 w-75">
       <div class="container mt-4 justify-content-center w-75">
-        <h1 class="text-center display-2 pb-4" id="t">Create Post</h1>
+        <h1 class="text-center display-2 pb-4" id="header">Create Post</h1>
         <div id="postAlertPlaceholder" class="mb-3"></div>
         <div class="mb-3">
           <label for="title" class="form-label">Title</label>
@@ -87,7 +87,7 @@ const contentField = ref('')
 
 
 <style scoped>
-#t{
+#header{
   font-family: "Poppins",sans-serif;
   color: #11009e;
 }

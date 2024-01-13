@@ -3,10 +3,8 @@
     <Navbar />
   </header>
 
-  <main>
-    <div class="px-4 my-5">
+  <main class="mt-5 mx-4 pb-5">
       <Posts/>
-    </div>
   </main>
 </template>
 
