@@ -11,7 +11,6 @@ const router = createRouter({
       name: 'home',
       component: HomeView
     },
-    ,
     {
       path: '/post/{:id}',
       name: 'PostDetails',

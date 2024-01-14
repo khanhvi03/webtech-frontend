@@ -12,11 +12,4 @@ import Post from "@/components/Post/Post.vue";
 import {RouterLink} from "vue-router";
 </script>
 
-<style scoped>
-#logo {
-  font-family: 'Playfair Display', serif;
-  font-size: 40px;
-  text-decoration: none;
-  color: #332FD0;
-}
-</style>
+<style scoped></style>
