@@ -27,7 +27,7 @@
     </div>
 
     <div class="mb-3">
-      <label for="submission-input" class="form-label">Content (Max 3000 characters)</label>
+      <label for="submission-input" class="form-label">Content (Max. 3000 characters)</label>
       <textarea v-model="contentField" class="form-floating form-control" :class="{ 'is-invalid': !contentField }"
                 id="submission-input" style="height: 200px" required>
       </textarea>

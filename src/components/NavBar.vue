@@ -92,7 +92,7 @@ onMounted(async () => {
 
 #logo {
   font-family: 'Rubik Spray Paint', sans-serif;
-  font-size: 80px;
+  font-size: 70px;
   text-decoration: none;
   color: #11009e;
 }

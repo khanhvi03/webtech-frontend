@@ -10,9 +10,9 @@
               <router-link class="text-decoration-none" id="title" :to="{ name: 'PostDetails', params: { id : post.id } }">
                 <h4 class="card-title pb-1">{{ post.title }}</h4>
               </router-link>
-              <h6 class="card-subtitle text-body text-black">
+              <p class="card-subtitle text-body text-black">
                 {{ formatDateTime(post.updatedOn) }} by <span class="text-body-emphasis fw-semibold">{{ post.author }}</span>
-              </h6>
+              </p>
             </div>
           </div>
         </div>
@@ -59,7 +59,10 @@ onMounted(() => {
 </script>
 
 <style>
-
+#header{
+  color: #11009e;
+  font-family: "Poppins SemiBold", sans-serif;
+}
 #title{
   color: #332FD0;
 }
