@@ -1,8 +1,8 @@
 <template>
   <form @submit.prevent="submit">
   <div class="container px-4 my-5 justify-content-center ">
-    <h1 class="mb-5 text-center display-4 text-emphasis" id="header">SUBMIT</h1>
-    <h6 class="mb-3">Please fill in all fields to submit your work!</h6>
+    <h3 class="mb-5 text-center display-4 text-emphasis" id="header">24/7 OPEN CALL</h3>
+    <h4 class="mb-3">Please fill in all fields to submit your work!</h4>
     <div id="alertPlaceholder" class="mb-3"></div>
 
     <div class="mb-3">

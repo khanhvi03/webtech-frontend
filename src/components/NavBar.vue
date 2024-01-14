@@ -12,8 +12,8 @@
         <div class="col-4 text-center">
           <!-- Logo and Title -->
           <a href="/" class="d-flex align-items-center justify-content-center" id="logo">
-            <img alt="Logo" class="d-inline-block align-content-center" src="@/assets/title.svg" width="30" height="30"/>
-            <span class="ms-1">Penhub</span>
+
+            <span class="ms-1" style="font-weight: lighter">Penhub</span>
           </a>
         </div>
         <div class="col-4 d-flex justify-content-end align-items-center">
@@ -86,9 +86,13 @@ onMounted(async () => {
 </script>
 
 <style scoped>
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Spray+Paint&display=swap');
+
+
 #logo {
-  font-family: 'Playfair Display', serif;
-  font-size: 40px;
+  font-family: 'Rubik Spray Paint', sans-serif;
+  font-size: 80px;
   text-decoration: none;
   color: #11009e;
 }
@@ -104,7 +108,7 @@ onMounted(async () => {
 .nav-link.router-link-active {
   color: #000000;
   font-weight: bolder;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
 }
 
 </style>
