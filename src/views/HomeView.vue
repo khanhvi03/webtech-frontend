@@ -2,8 +2,8 @@
   <header>
     <Navbar />
   </header>
-
-  <main class="mt-5 mx-4 pb-5">
+  <h2 class="mb-4 pb-4 display-4 text-emphasis text-center pt-5 " id="header">PUBLICATIONS</h2>
+  <main class=" mt-5 mx-4 pb-5">
       <Posts/>
   </main>
 </template>

@@ -13,7 +13,7 @@
           <!-- Logo and Title -->
           <a href="/" class="d-flex align-items-center justify-content-center" id="logo">
 
-            <span class="ms-1" style="font-weight: lighter">Penhub</span>
+            <span class="ms-1" style="font-weight: lighter">Wordwave</span>
           </a>
         </div>
         <div class="col-4 d-flex justify-content-end align-items-center">

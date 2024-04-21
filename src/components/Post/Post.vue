@@ -1,5 +1,5 @@
 <template>
-  <div class="container justify-content-center w-75">
+  <div class="container justify-content-center">
     <div class="p-3 mb-2 align-content-center">
         <!-- Post header-->
         <header class="mb-4 text-center">
@@ -9,11 +9,9 @@
           <p class="mb-2 ms-2">Published on {{ formatDateTime(post.publishedOn) }} </p>
           <div class="text-muted fst-italic">By {{ post.author }}</div>
         </header>
+          <!-- Post content-->
+          <p class="d-flex justify-content-center p-2 px-5" style="white-space: pre-line;">{{ post.content }}</p>
     </div>
-    <!-- Post content-->
-    <section class=" d-flex text-align-c">
-      <p class="fs-5 mb-4">{{ post.content }}</p>
-    </section>
   </div>
 </template>
 

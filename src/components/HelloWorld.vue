@@ -7,7 +7,7 @@ defineProps<{
 <template>
   <main>
     <div class="hello">
-      <h1>Welcome to Penhub!</h1>
+      <h1>Welcome to Wordwave!</h1>
     </div>
   </main>
 </template>

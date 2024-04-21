@@ -19,7 +19,7 @@
       <tr v-for="submission in submissions" :key="submission.id">
         <td>{{ submission.title }}</td>
         <td>{{ submission.name }}</td>
-        <td>{{ submission.email }}</td>
+        <td> <a href="#">{{ submission.email }}</a> </td>
         <td>
           <div>
             {{ submission.content.substring(0, 40) }}...

@@ -8,7 +8,7 @@ import Navbar from '@/components/NavBar.vue'
     <div class="purchase-info-container container-fluid">
       <p class="main-heading text-white p-1 mx-5">
         If you want to purchase our Zine, please PayPal 12€ to
-        <span style="color: #ff8c00">penhub@gmail.com</span>
+        <a href="#" style="text-decoration:none; color: #ff8c00">wordwave@gmail.com</a>
         with your address in the description and the # of the Zine you want to purchase. Shipping
         is included in the price. We only ship in Europe.
       </p>
@@ -38,8 +38,7 @@ import Navbar from '@/components/NavBar.vue'
         <div class="purchase-info-container" style="background-color: white; color: #11009e;">
           <div class="purchase-info">
             <h4 class="info-text px-3">
-              Each Zine is printed in Berlin and has about 50-80 pages of selected works submitted to
-              Penhub throughout the year.
+              Each Zine is printed in Berlin and has about 50-80 pages of selected works submitted to Wordwave throughout the year.
             </h4>
           </div>
         </div>
@@ -56,12 +55,6 @@ import Navbar from '@/components/NavBar.vue'
   align-items: center;
 }
 
-/* Add a gray background to the container */
-.zine-container {
-  background-color: #d2d2d2;
-  padding: 20px; /* Add padding to create space */
-}
-
 .purchase-info-container {
   background-color: #11009e; /* Yves Klein Blue */
   text-align: center;
@@ -69,9 +62,6 @@ import Navbar from '@/components/NavBar.vue'
   font-size: 20px; /* Adjust the size as needed */
 }
 
-.bigger-info {
-  font-size: 20px; /* Adjust the size as needed */
-}
 
 .zine {
   margin: 20px;
