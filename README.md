@@ -54,4 +54,8 @@ where they can manage their posts, submissions from writers, and profile informa
 <img alt="profile.png" src="screenshot/profile.png" style="border:1px solid"/>
 
 ## 🚀 Deploy
-
+* Backend: https://wordwave-backend.up.railway.app
+* Frontend: https://wordwave-frontend.netlify.app
+  or set in .env.development: VITE_BACKEND_BASE_URL=https://wordwave-backend.up.railway.app
+  and use `npm run dev` in terminal
+  
