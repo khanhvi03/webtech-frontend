@@ -14,16 +14,16 @@ describe('Testing PostList.vue', () => {
             author: 'John Doe',
             title: 'Title 1',
             content: 'Content 1',
-            publishedOn: '2022-01-01',
-            updatedOn: '2022-01-02'
+            publishedOn: '2022-01-01T12:34:56',
+            updatedOn: '2022-01-01T12:34:56'
         },
         {
             id: 2,
             author: 'Jane Do',
             title: 'Title 2',
             content: 'Content 2',
-            publishedOn: '2022-01-05',
-            updatedOn: '2022-01-06'
+            publishedOn: '2022-01-01T12:34:56',
+            updatedOn: '2022-01-01T12:34:56'
         },
     ];
 
