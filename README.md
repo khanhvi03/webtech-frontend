@@ -1,7 +1,9 @@
 <h1 align="center" style="font-weight: lighter"> 📚  WordWave - print and publishing website </h1>
 
+**Backend-Repo:** <a href="https://github.com/khanhvi03/webtech-backend.git">https://github.com/khanhvi03/webtech-backend.git</a> 
+
 ## ⚙️ Structure
-* **Frontend (Client-Side**): Vue (Framework) + TypeScript + Vue-Router + Bootstrap + Axios + Vitest (Testing) + Okta (Authorizaion/Authentication)
+* **Frontend (Client-Side**): Vue (Framework) + TypeScript + Vue-Router + Bootstrap + Axios + Vitest (Testing) + Okta (Authorization/Authentication)
 * **Backend (Server-Side)**: Spring Boot + PostgreSQL + Gradle (Testing)
 
 ## 🌟 Features
